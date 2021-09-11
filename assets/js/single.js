@@ -1,11 +1,14 @@
 var repoNameEl = document.querySelector("#repo-name");
 var issueContainerEl = document.querySelector("#issues-container");
 var limitWarningEl = document.querySelector("#limit-warning");
+var epoNameEl = document.querySelector("#repo-name");
 
 function getRepoName() {
 var queryString = document.location.search;
 var repoName = queryString.split("=")[1];
 console.log(repoName);
+getRepoIssues(repoName);
+repoNameEl.textContent = repoName;
 };
 getRepoName();
 
